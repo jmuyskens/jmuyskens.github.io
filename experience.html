@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<div class="home">
+	<h1><a href="/">John Muyskens</a>: Experience</h1>
+	{% for item in site.experience %}
+    <div id="{{ item.anchor }}" class="experiences">
+	    <h3>{{ item.title }}</h3>
+	    <h4>{{ item.dates }}</h4>
+	    {{ item.content }}
+    </div>
+    {% endfor %}
+</div>
