@@ -57,7 +57,7 @@ img {
     max-width: 100%;
     vertical-align: middle;
     &.thumb {
-        border: 1px solid #eee;
+        border: 1px solid #ddd;
     }
 
     &.page-image {
@@ -93,6 +93,15 @@ li {
     > ul,
     > ol {
          margin-bottom: 0;
+    }
+
+    .front-portfolio-thumbs & {
+        box-sizing: border-box;
+        padding-right: 1rem;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     }
 }
 

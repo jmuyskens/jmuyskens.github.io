@@ -2,7 +2,7 @@
 layout: design
 title: Interactive map of the Hekman Library
 image: hekmap.png
-thumb: hekmap_thumb.png
+thumb: hekmap_square.jpg
 ---
 I built an interactive map of Calvin College’s Hekman Library. It allows a user to add books to a map while browsing the library catalog website. This is helpful as the library layout can be confusing, even to an experienced patron. The mobile version of the website is also a handy reference for keeping track of books that you want to check out, saving you from having to write down each call number by hand on a piece of paper. While there are systems at some libraries to map individual books, I have not found a competing system that allows you to map multiple books.
 
