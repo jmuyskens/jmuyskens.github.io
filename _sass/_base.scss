@@ -8,8 +8,6 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
-
 /**
  * Basic styling
  */
@@ -62,6 +60,7 @@ img {
 
     &.page-image {
         max-height: 400px;
+        margin-bottom: 1rem;
     }
 }
 
@@ -238,4 +237,9 @@ pre {
     unicode-bidi: bidi-override;
     direction: rtl;
     text-align: left;
+}
+
+svg {
+    fill: none;
+    stroke: maroon;
 }
