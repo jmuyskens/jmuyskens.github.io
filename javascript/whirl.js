@@ -8,9 +8,11 @@ function lineFunctionFunction(factor) {
 var trianglePoints = [{"x":-1, "y":-0.866025404}, {"x":0, "y":0.866025404},
 					  {"x":1, "y":-0.866025404}, {"x":-1, "y":-0.866025404}];
 
-function nested(num, factor) {
+factor = 100;
+
+function nested(num, total) {
 	if (num > 0)
-		var myNest = nested(num - 1, factor);
+		var myNest = nested(num - 1, total);
 	var lineFunction = lineFunctionFunction(factor);
 	function my(selection) {
 		selection.each(function(data) {
@@ -18,16 +20,27 @@ function nested(num, factor) {
 
 			// make the stroke fatter to keep weight consistent as triangle is scaled smaller
 			var path = s.append("path")
-			  .style("stroke-width", 1 / Math.pow(0.87, 42 - num));
+			  .style("stroke", "maroon")
+			  .attr("d", lineFunction(trianglePoints));
+
+
 
 			path.transition()
-			 .duration(0)
-			 .attr("d", lineFunction(trianglePoints));
+			 .delay(300)
+			 .duration(5000)
+			 .style("stroke-width", 1 / Math.pow(0.87, total - num));
 
-			if (num > 0)
-				s.append("g")
-				  .attr("transform", "scale(.87)rotate(5)translate(-2.7,-4.2)")
+
+			if (num > 0) {
+
+				var newTriangle = s.append("g")
 				  .call(myNest);
+
+				newTriangle.transition()
+				  .delay(300)
+				  .duration(5000)
+				  .attr("transform", "scale(.87)rotate(5)translate(-2.7,-4.2)");
+			}
 
 		});
 	}
@@ -35,14 +48,14 @@ function nested(num, factor) {
 	return my;
 }
 
-function hexwhirl(selector, width) {
+function hexwhirl(width, selector, triangles) {
 	var svg = d3.select(selector).append("svg")
       .attr("width", width)
       .attr("height", width)
       .append("g")
       .attr("transform", "scale(" + (width / 400) + "," + (width / 400) + ")");
 
-    var nest = nested(42, 100);
+    var nest = nested(triangles, triangles);
 
 	var hex = ["translate(100,100)scale(1,-1)", "translate(200,100)", "translate(300,100)scale(1,-1)", "translate(200,273)scale(1,-1)", "translate(100,273)", "translate(300,273)"];
 
