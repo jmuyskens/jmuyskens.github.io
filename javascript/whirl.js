@@ -20,13 +20,12 @@ function nested(num, total) {
 
 			// make the stroke fatter to keep weight consistent as triangle is scaled smaller
 			var path = s.append("path")
-			  .style("stroke", "maroon")
 			  .attr("d", lineFunction(trianglePoints));
 
 
 
 			path.transition()
-			 .delay(300)
+			 .delay(500)
 			 .duration(5000)
 			 .style("stroke-width", 1 / Math.pow(0.87, total - num));
 
@@ -61,7 +60,10 @@ function hexwhirl(width, selector, triangles) {
 
 	var triangles = svg.selectAll("g.triangle")
 	  .data(hex)
-	  .enter().append("g");
+	  .enter().append("g")
+	  .style("opacity", 0);
+
+	triangles.transition().delay(500).duration(3000).style("opacity", 1)
 
 	triangles
 	  .attr("transform", function(d){ return d; })
