@@ -3,6 +3,7 @@ layout: design
 title: Calvin's Use of the Plant Fund
 image: debt.png
 thumb: debt_square.jpg
+slug: debt
 ---
 [Read the article here.](http://www.calvin.edu/chimes/2012-13/budget/budget.htm)
 

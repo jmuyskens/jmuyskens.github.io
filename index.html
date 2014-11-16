@@ -33,6 +33,20 @@ layout: default
   </div>
   </div>
 
+  <div id="info-design" class="front-portfolio-thumbs">
+    <h2>Information Design</h2>
+    <ul class="post-list">
+      {% for item in site.information_graphics %}
+      <li>
+        <a href="{{ item.url | prepend: site.baseurl }}">
+          <img class="thumb" src="{{ site.baseurl }}/images/{{ item.thumb }}">
+          <span class="slug">{{ item.slug }}</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
   <div id="web-design" class="front-portfolio-thumbs">
     <h2>Web Design</h2>
     <ul class="post-list">
@@ -40,6 +54,7 @@ layout: default
       <li>
         <a href="{{ item.url | prepend: site.baseurl }}">
           <img class="thumb" src="{{ site.baseurl }}/images/{{ item.thumb }}">
+          <span class="slug">{{ item.slug }}</span>
         </a>
       </li>
       {% endfor %}
@@ -53,13 +68,30 @@ layout: default
       <li>
         <a href="{{ item.url | prepend: site.baseurl }}">
           <img class="thumb" src="{{ site.baseurl }}/images/{{ item.thumb }}">
+          <span class="slug">{{ item.slug }}</span>
         </a>
       </li>
       {% endfor %}
     </ul>
   </div>
 
+
 </div>
+
+<div id="writing" class="clearfix">
+  <div id="published">
+    <h2>Published Work</h2>
+    {% for item in site.published %}
+    <li>
+      <a href="{{ item.link }}">
+        {{ item.title }}
+      </a>
+      <p>{{ item.description }}</p>
+    </li>
+    {% endfor %}
+  </div>
+</div>
+
 
 <script>
 hexwhirl(175, "#whirl", 18);

@@ -3,6 +3,7 @@ layout: design
 title: Calvin course scheduler
 image: scheduler.jpg
 thumb: scheduler_square.jpg
+slug: course scheduler
 ---
 For my senior project, I created a web app to help department chairs schedule classes for upcoming semesters. Chairs currently complete this task with spreadsheets. Chairs email these spreadsheets back and forth to communicate with other departments and the registrar, a process which is time-consuming and frustrating. Our app provides a usable alternative interface for scheduling classes.
 

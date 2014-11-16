@@ -16,6 +16,10 @@ collections:
     output: true
   web_design:
     output: true
+  published:
+    output: false
+  information_graphics:
+    output: true
 
 # Build settings
 markdown: kramdown

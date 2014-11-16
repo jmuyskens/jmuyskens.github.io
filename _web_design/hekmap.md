@@ -3,6 +3,7 @@ layout: design
 title: Interactive map of the Hekman Library
 image: hekmap.png
 thumb: hekmap_square.jpg
+slug: library map
 ---
 [Here's a link to a demonstration of the project.](http://hekmap.herokuapp.com/42)
 

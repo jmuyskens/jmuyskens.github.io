@@ -3,6 +3,7 @@ layout: design
 title: "Interactive: The Decade in Calvin Enrollment"
 image: day10.png
 thumb: day10_square.jpg
+slug: day 10 interactive
 link: http://www.calvin.edu/chimes/2013-14/enrollment/enrollment.html
 ---
 [Here's a link to the project.](http://www.calvin.edu/chimes/2013-14/enrollment/enrollment.html)
