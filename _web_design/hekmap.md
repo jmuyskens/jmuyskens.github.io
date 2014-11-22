@@ -5,9 +5,14 @@ image: hekmap.png
 thumb: hekmap_square.jpg
 slug: library map
 ---
+
 [Here's a link to a demonstration of the project.](http://hekmap.herokuapp.com/42)
 
 I built an interactive map of Calvin College’s Hekman Library. It allows a user to add books to a map while browsing the library catalog website. This is helpful as the library layout can be confusing, even to an experienced patron. The mobile version of the website is also a handy reference for keeping track of books that you want to check out, saving you from having to write down each call number by hand on a piece of paper. While there are systems at some libraries to map individual books, I have not found a competing system that allows you to map multiple books.
+
+Watch Bo Barg, one of my teammates, demonstrate the app:
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/cGVcxw0v1TM?list=UUqo60n7aXBlILiFXkdHQM3g" frameborder="0" allowfullscreen></iframe>
 
 I came up with the idea in my first computer science class in college. At the time, I was an electrical engineer, but I enjoyed the class so much that I decided to switch majors. I also, at that time, worked as a reference assistant in the library, which helped with the inspiration.
 
